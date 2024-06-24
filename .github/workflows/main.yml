@@ -28,6 +28,6 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t <dockerhub-username>/node_calculator:latest .
-        echo ${{ secrets.samreen23523 }} | docker login -u ${{ secrets.tayyaba23 }} --password-stdin
-        docker push <dockerhub-username>/node_calculator:latest
+        docker build -t <dockerhub-tayyaba23>/node_calculator:latest .
+        echo ${{ secrets.samreen23523}} | docker login -u ${{ secrets.tayyaba23 }} --password-stdin
+        docker push <dockerhub-tayyaba23>/node_calculator:latest
