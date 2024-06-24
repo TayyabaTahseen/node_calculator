@@ -29,5 +29,5 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t <dockerhub-username>/node_calculator:latest .
-        echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        echo ${{ secrets.samreen23523 }} | docker login -u ${{ secrets.tayyaba23 }} --password-stdin
         docker push <dockerhub-username>/node_calculator:latest
