@@ -28,7 +28,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.tayyaba23 }}
+          username: ${{ secrets.TAYYABA23 }}
           password: ${{ secrets.samreen23523 }}
       - name: Build Docker image
         run: docker build -t node_calculator:latest
