@@ -24,11 +24,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run Unit Tests
-      run: npm run test:unit
+    - name: Run unit tests
+      run: npm run test:unit-test
 
-    - name: Run Integration Tests
-      run: npm run test:integration
+    - name: Run integration tests
+      run: npm run test:integration-test
 
     - name: Build Docker image
       run: docker build -t node_calculator:latest .
