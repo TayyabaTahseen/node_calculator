@@ -25,10 +25,10 @@ jobs:
       run: npm install
 
     - name: Run unit tests
-      run: npm run test:unit-test
+      run: npm run test:unit
 
     - name: Run integration tests
-      run: npm run test:integration-test
+      run: npm run test:integration
 
     - name: Build Docker image
       run: docker build -t node_calculator:latest .
