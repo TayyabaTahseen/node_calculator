@@ -29,10 +29,6 @@ jobs:
 
     - name: Run integration tests
       run: npm run test:integration
-      
-
-    - name: Build Docker image
-      run: docker build -t node_calculator:latest .
 
    # - name: Login to Docker Hub
     #  run: echo "${{ secrets.samreen23523 }}" | docker login -u "${{ secrets.tayyaba23 }}" --password-stdin
@@ -41,6 +37,9 @@ jobs:
         with:
           username: ${{ secrets.tayyaba23 }}
           password: ${{ secrets.samreen23523 }}
+          
+    - name: Build Docker image
+      run: docker build -t node_calculator:latest 
 
     - name: Push Docker image to Docker Hub
       run: docker push node_calculator:latest
