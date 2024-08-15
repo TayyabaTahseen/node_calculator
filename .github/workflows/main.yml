@@ -25,13 +25,13 @@ jobs:
         run: npm run test:unit
       - name: Run integration tests
         run: npm run test:integration
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.tayyaba23 }}
-          password: ${{ secrets.samreen23523 }}
-      - name: Build Docker image
-        run: docker build -t node_calculator:latest
-      - name: Push Docker image to Docker Hub
-        run: docker push node_calculator:latest
+     # - name: Log in to Docker Hub
+       # uses: docker/login-action@v2
+       # with:
+        #  username: ${{ secrets.tayyaba23 }}
+         # password: ${{ secrets.samreen23523 }}
+      #- name: Build Docker image
+       # run: docker build -t node_calculator:latest
+      #- name: Push Docker image to Docker Hub
+       # run: docker push node_calculator:latest
 
