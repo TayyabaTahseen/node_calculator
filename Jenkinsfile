@@ -3,10 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    git 'https://github.com/TayyabaTahseen/node_calculator.git'
-
-                }
+                sh "npm install"
             }
         }
         stage('Unit Test') {
@@ -19,13 +16,7 @@ pipeline {
                 sh 'npm run integration-test'
             }
         }
-        stage('Deploy') {
-            steps {
-                script {
-                  git 'https://github.com/TayyabaTahseen/node_calculator.git'
-                    }
-                }
-            }
+       
         
     }
 }
