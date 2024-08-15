@@ -1,3 +1,4 @@
+# it runs first unit test and integration test in sequence
 name: CI/CD Pipeline
 
 on:
