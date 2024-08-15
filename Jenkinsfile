@@ -4,7 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def dockerImage = docker.build("node_calculator:latest")
+                    git 'https://github.com/TayyabaTahseen/node_calculator.git'
+
                 }
             }
         }
@@ -18,14 +19,13 @@ pipeline {
                 sh 'npm run integration-test'
             }
         }
-        stage('Delivery') {
+        stage('Deploy') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        dockerImage.push('latest')
+                  git 'https://github.com/TayyabaTahseen/node_calculator.git'
                     }
                 }
             }
-        }
+        
     }
 }
