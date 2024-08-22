@@ -169,7 +169,7 @@ describe('gcd function', () => {
 
 });
 
-// percentage
+// percentage for unit
 describe('percentage function', () => {
     test('percentage function exists', () => {
         expect(percentage).toBeDefined();
